@@ -27,7 +27,7 @@ public class LogOutTest extends BaseTest {
         loginPage.login(userName, inpPassword);
         HomePage homePage = new HomePage();
         homePage.openBurgerMenu();
-        saveScreenshot();
+      //  saveScreenshot();
 
     }
 
