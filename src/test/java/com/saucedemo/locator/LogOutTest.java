@@ -1,17 +1,14 @@
 package com.saucedemo.locator;
 
+import com.saucedemo.locator.page_object.DriverProvider;
 import com.saucedemo.locator.page_object.HomePage;
 import com.saucedemo.locator.page_object.LoginPage;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
 
-public class LogOutTest extends BaseTest {
+public class LogOutTest{
 
 
     @Test(description = "This is LogOut test.")
@@ -19,6 +16,7 @@ public class LogOutTest extends BaseTest {
 
         login("standard_user", "secret_sauce");
         logout();
+        DriverProvider.quit();
     }
 
     @Step("Login on the site")
@@ -41,4 +39,5 @@ public class LogOutTest extends BaseTest {
     public byte[] saveScreenshot(byte[] screenShot) {
         return screenShot;
     }
+
 }
