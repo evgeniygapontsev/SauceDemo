@@ -20,9 +20,6 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       - run:
-          - name: Checking chrome version
-          - command: chrome --version
-      - run:
           name: Running tests
           command: mvn clean test
       - run:
