@@ -18,6 +18,7 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
+
       - run:
           - name: Checking chrome version
           - command: chrome --version
