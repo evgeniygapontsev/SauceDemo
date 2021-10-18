@@ -1,20 +1,22 @@
-1. AddRemoveTest.
-   Добавить 2 продукта в корзину(ожидаемый результат:добавление 2 продуктов).
-   Перейти в корзину.
-   Удалить один из продуктов(ожидаемый результат:один из продуктов удален).
-   Вернуться на HomePage(ОР:возврат на галвную страницу).
-2. ResetCartTest.
-   Добавить продукт в корзину(ОР:добавление продукта в корзину).
-   Вызов кнопки "Reset App State" через меню(ОР:очищение содержимого корзины).
-3. LogOutTest.
-   Вызов кнопки "Logout" через меню на Home Page(ОР:переход на Login Page).
-4. CheckOutTest.
-   Добавление товара в корзину, переход в корзину.
-   Нажатие кнопки "Checkout"(ОР:переход на Checkout Page).
-   Ввод first name, last name, zipcode\postal code, нажатие кнопки "Continue"
-   (ОР:переход на страницу окончательного просмотра).
-   Нажатие кнопки "Finish"(ОР:принятие заказа).
-5. ProductSortTest.
-   На Home Page выбор кнопки сортировки товара, и поочередное нажатие сортировок
-   (ОР:сортировка по наименованию от Z до A, сортировка по цене от меньшей к 
-   большей, сортировка по цене от большей к меньшей).
+1. mvn versions:display-dependency-updates
+   The following dependencies in Dependencies have newer versions:
+      io.github.bonigarcia:webdrivermanager ................. 4.4.3 -> 5.0.1
+      org.seleniumhq.selenium:selenium-chrome-driver ...
+                                                      3.141.59 -> 4.0.0-rc-1
+      org.seleniumhq.selenium:selenium-ie-driver .... 3.141.59 -> 4.0.0-rc-1
+      org.seleniumhq.selenium:selenium-support ...... 3.141.59 -> 4.0.0-rc-1
+
+2. mvn clean test
+   Results :
+   Failed tests: logOut(com.saucedemo.locator.LogOutTest): 
+   element not interactable(..)
+   Tests run: 6, Failures: 1, Errors: 0, Skipped: 0
+   Total time:  01:52 min
+
+3. mvn -Dtest=LogOutTest test
+   Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, 
+   Time elapsed: 15.879 s - in com.saucedemo.locator.LogOutTest
+    Results:
+    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+    BUILD SUCCESS
+    Total time:  25.866 s
